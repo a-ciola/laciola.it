@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yourusername.github.io/laciola.it",
+  "homepage": "https://laciola.it",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
