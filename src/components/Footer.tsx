@@ -7,7 +7,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 	return (
-		<footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-20 relative overflow-hidden">
+		<footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-12 relative overflow-hidden">
 			{/* Background elements */}
 			<div className="absolute inset-0">
 				<div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -15,7 +15,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 			</div>
 
 			<div className="container mx-auto px-6 relative z-10">
-				<div className="grid md:grid-cols-3 gap-12 mb-16">
+				<div className="grid md:grid-cols-3 gap-12">
 					<div className="col-span-2">
 						<div className="flex items-center space-x-4 mb-8">
 							<img
@@ -76,7 +76,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 					</div>
 				</div>
 
-				<div className="border-t border-gray-700/50 pt-12">
+				<div className="pt-16">
 					<div className="text-center">
 						<div className="text-gray-400 text-sm">
 							© 2025 Laciola. All rights reserved. Excellence in innovation
