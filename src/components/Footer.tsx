@@ -15,9 +15,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 			</div>
 
 			<div className="container mx-auto px-6 relative z-10">
-				<div className="grid md:grid-cols-4 gap-12 mb-16">
-					<div className="col-span-2">
-						<div className="flex items-center space-x-4 mb-8">
+				<div className="grid md:grid-cols-1 gap-12 mb-16">
+					<div className="max-w-2xl mx-auto text-center">
+						<div className="flex items-center justify-center space-x-4 mb-8">
 							<img
 								src="/Logo.png"
 								alt="Laciola"
@@ -32,12 +32,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 								</span>
 							</div>
 						</div>
-						<p className="text-gray-300 leading-relaxed mb-8 max-w-lg text-lg">
+						<p className="text-gray-300 leading-relaxed mb-8 text-lg">
 							Pioneering innovative solutions that transform enterprises and
 							drive sustainable growth across global markets. Your success is
 							our unwavering commitment to excellence.
 						</p>
-						<div className="space-y-4">
+						<div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
 							<div className="flex items-center space-x-3 text-gray-300">
 								<Mail className="h-5 w-5 text-blue-400" />
 								<span>info@laciola.it</span>
@@ -47,52 +47,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 								<span>Milano, Italia</span>
 							</div>
 						</div>
-					</div>
-
-					<div>
-						<h3 className="text-xl font-bold mb-8 text-white">
-							Excellence Areas
-						</h3>
-						<ul className="space-y-4 text-gray-300">
-							<li className="hover:text-blue-400 transition-colors cursor-pointer">
-								Strategic Consulting
-							</li>
-							<li className="hover:text-blue-400 transition-colors cursor-pointer">
-								Digital Transformation
-							</li>
-							<li className="hover:text-blue-400 transition-colors cursor-pointer">
-								Process Innovation
-							</li>
-							<li className="hover:text-blue-400 transition-colors cursor-pointer">
-								Technology Integration
-							</li>
-							<li className="hover:text-blue-400 transition-colors cursor-pointer">
-								Performance Optimization
-							</li>
-						</ul>
-					</div>
-
-					<div>
-						<h3 className="text-xl font-bold mb-8 text-white">
-							Global Presence
-						</h3>
-						<ul className="space-y-4 text-gray-300">
-							<li className="hover:text-blue-400 transition-colors cursor-pointer">
-								European Markets
-							</li>
-							<li className="hover:text-blue-400 transition-colors cursor-pointer">
-								North America
-							</li>
-							<li className="hover:text-blue-400 transition-colors cursor-pointer">
-								Asia Pacific
-							</li>
-							<li className="hover:text-blue-400 transition-colors cursor-pointer">
-								Emerging Markets
-							</li>
-							<li className="hover:text-blue-400 transition-colors cursor-pointer">
-								Strategic Partnerships
-							</li>
-						</ul>
 					</div>
 				</div>
 
