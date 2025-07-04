@@ -15,9 +15,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 			</div>
 
 			<div className="container mx-auto px-6 relative z-10">
-				<div className="grid md:grid-cols-1 gap-12 mb-16">
-					<div className="max-w-2xl mx-auto text-center">
-						<div className="flex items-center justify-center space-x-4 mb-8">
+				<div className="grid md:grid-cols-3 gap-12 mb-16">
+					<div className="col-span-2">
+						<div className="flex items-center space-x-4 mb-8">
 							<img
 								src="/Logo.png"
 								alt="Laciola"
@@ -32,12 +32,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 								</span>
 							</div>
 						</div>
-						<p className="text-gray-300 leading-relaxed mb-8 text-lg">
+						<p className="text-gray-300 leading-relaxed mb-8 max-w-lg text-lg">
 							Pioneering innovative solutions that transform enterprises and
 							drive sustainable growth across global markets. Your success is
 							our unwavering commitment to excellence.
 						</p>
-						<div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+						<div className="space-y-4">
 							<div className="flex items-center space-x-3 text-gray-300">
 								<Mail className="h-5 w-5 text-blue-400" />
 								<span>info@laciola.it</span>
@@ -48,33 +48,39 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div className="border-t border-gray-700/50 pt-12">
-					<div className="flex flex-col md:flex-row justify-between items-center">
-						<div className="text-gray-400 text-sm mb-4 md:mb-0">
-							© 2025 Laciola. All rights reserved. Excellence in innovation
-							since 2009.
-						</div>
-						<div className="flex space-x-8">
+					<div className="flex flex-col justify-center">
+						<h3 className="text-xl font-bold mb-6 text-white">
+							Legal Information
+						</h3>
+						<div className="flex flex-col space-y-4">
 							<button
 								onClick={() => onNavigate("privacy")}
-								className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer"
+								className="text-gray-300 hover:text-blue-400 text-left transition-colors cursor-pointer"
 							>
 								Privacy & Compliance
 							</button>
 							<button
 								onClick={() => onNavigate("terms")}
-								className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer"
+								className="text-gray-300 hover:text-blue-400 text-left transition-colors cursor-pointer"
 							>
 								Terms of Engagement
 							</button>
 							<button
 								onClick={() => onNavigate("legal")}
-								className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer"
+								className="text-gray-300 hover:text-blue-400 text-left transition-colors cursor-pointer"
 							>
 								Legal Framework
 							</button>
+						</div>
+					</div>
+				</div>
+
+				<div className="border-t border-gray-700/50 pt-12">
+					<div className="text-center">
+						<div className="text-gray-400 text-sm">
+							© 2025 Laciola. All rights reserved. Excellence in innovation
+							since 2009.
 						</div>
 					</div>
 				</div>
