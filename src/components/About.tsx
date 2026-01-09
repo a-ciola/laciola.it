@@ -39,49 +39,43 @@ const About: React.FC = () => {
 	return (
 		<section id="about" className="py-20 bg-white">
 			<div className="container mx-auto px-6">
-				<div className="max-w-4xl mx-auto text-center mb-16">
-					<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-						Leading the Future of
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-							{" "}
-							Information Technology
-						</span>
+				<div className="max-w-3xl mx-auto text-center mb-20">
+					<h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-6">
+						Leading the Future of <span className="text-primary-800 font-medium">Information Technology</span>
 					</h2>
-					<p className="text-xl text-gray-600 leading-relaxed">
-						For over a decade, we have been at the forefront of technological
-						advancement, partnering with organizations worldwide to unlock their
-						full potential through innovative IT strategies and comprehensive
-						technology solutions.
+					<p className="text-lg text-gray-600 leading-relaxed font-light">
+						For over a decade, we've partnered with organizations worldwide to unlock their
+						full potential through innovative IT strategies.
 					</p>
 				</div>
 
-				<div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+				<div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
 					{stats.map((stat, index) => (
 						<div
 							key={index}
-							className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg"
+							className="text-center p-8 bg-white border border-gray-100 hover:border-primary-500 transition-all duration-300"
 						>
-							<div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-2">
+							<div className="text-5xl md:text-6xl font-light text-gray-900 mb-3">
 								{stat.number}
 							</div>
-							<div className="text-gray-600 font-medium">{stat.label}</div>
+							<div className="text-gray-500 text-sm font-light tracking-wide">{stat.label}</div>
 						</div>
 					))}
 				</div>
 
-				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 					{values.map((value, index) => (
 						<div
 							key={index}
-							className="group p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+							className="group p-8 bg-white border-l-2 border-gray-200 hover:border-primary-500 transition-all duration-300"
 						>
-							<div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">
+							<div className="text-gray-400 mb-6 group-hover:text-primary-600 transition-colors">
 								{value.icon}
 							</div>
-							<h3 className="text-xl font-bold text-gray-900 mb-4">
+							<h3 className="text-xl font-normal text-gray-900 mb-3">
 								{value.title}
 							</h3>
-							<p className="text-gray-600 leading-relaxed">
+							<p className="text-gray-600 leading-relaxed font-light text-sm">
 								{value.description}
 							</p>
 						</div>

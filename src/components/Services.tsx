@@ -1,71 +1,71 @@
 import {
-  Cloud,
-  Database,
-  Globe,
-  Settings,
-  Shield,
-  TrendingUp,
+  Archive,
+  CloudOff,
+  FileX,
+  ShieldAlert,
+  Trash2,
+  Unlock,
 } from "lucide-react";
 import type React from "react";
 
 const Services: React.FC = () => {
   const services = [
     {
-      icon: <Globe className="h-10 w-10" />,
-      title: "System Integration",
+      icon: <CloudOff className="h-10 w-10" />,
+      title: "Outage as a Service",
       description:
-        "Seamlessly connect disparate IT systems and processes across multiple platforms with our comprehensive integration frameworks.",
+        "We guarantee to bring your website offline when you need it least. Our state-of-the-art chaotic infrastructure ensures maximum downtime.",
       features: [
-        "Cross-platform compatibility",
-        "Scalable architecture",
-        "Real-time synchronization",
+        "99.9% Downtime Guarantee",
+        "Unexpected Crashes",
+        "Random 500 Errors",
       ],
     },
     {
-      icon: <Shield className="h-10 w-10" />,
-      title: "Cybersecurity",
+      icon: <ShieldAlert className="h-10 w-10" />,
+      title: "Zero-Security Framework",
       description:
-        "Advanced protection protocols and security frameworks ensure your critical IT assets remain secure and compliant.",
+        "We proactively remove firewalls and encryption to improve network latency. Your data belongs to the world.",
       features: [
-        "Enterprise-grade encryption",
-        "Threat detection",
-        "Security assessment",
+        "Plain-text passwords",
+        "Admin admin login",
+        "Firewall deactivation",
       ],
     },
     {
-      icon: <Settings className="h-10 w-10" />,
-      title: "IT Optimization",
+      icon: <FileX className="h-10 w-10" />,
+      title: "Data Loss as a Service",
       description:
-        "Streamline IT operations through intelligent automation and workflow enhancement methodologies tailored to your requirements.",
+        "We ensure your critical data is permanently deleted with no chance of recovery. Backups? We delete those too.",
       features: [
-        "Process automation",
-        "Performance analytics",
-        "System optimization",
+        "Irreversible Deletion",
+        "Backup Corruption",
+        "Ransomware Pre-installed",
       ],
     },
     {
-      icon: <TrendingUp className="h-10 w-10" />,
-      title: "Business Intelligence",
+      icon: <Unlock className="h-10 w-10" />,
+      title: "Data Breach as a Service",
       description:
-        "Harness the power of data-driven insights to make informed decisions and identify new technological opportunities.",
-      features: ["Data analytics", "Reporting systems", "Predictive modeling"],
+        "We expose your sensitive data to the highest bidder faster than you can say 'GDPR'. Transparency is our passion.",
+      features: ["Public SQL Databases", "Leaked Credentials", "Zero-Encryption Standard"],
     },
     {
-      icon: <Database className="h-10 w-10" />,
-      title: "Data Management",
+      icon: <Trash2 className="h-10 w-10" />,
+      title: "/dev/null Storage",
       description:
-        "Comprehensive data governance and management solutions that ensure accuracy, accessibility, and actionable insights.",
-      features: ["Database optimization", "Data migration", "Backup solutions"],
+        "Infinite write speeds with absolutely zero read capabilities. The ultimate Write-Only Memory solution for enterprise.",
+      features: ["Unlimited ingress", "Zero egress", "Bit-rot acceleration"],
     },
     {
-      icon: <Cloud className="h-10 w-10" />,
-      title: "Cloud Solutions",
+      icon: <Archive className="h-10 w-10" />,
+      title: "Legacy Debt Preservation",
       description:
-        "Leverage cloud-native technologies to enhance scalability, reduce costs, and accelerate digital transformation initiatives.",
+        "We ensure your technology stack remains deprecated. We specialize in maintaining COBOL mainframes and IE6 compatibility.",
       features: [
-        "Cloud migration",
-        "Infrastructure management",
-        "Hybrid solutions",
+        "Spaghetti code",
+        "Deprecated dependencies",
+        "Documentation burning",
       ],
     },
   ];
@@ -73,46 +73,40 @@ const Services: React.FC = () => {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
+      className="py-24 bg-white"
     >
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Comprehensive
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              {" "}
-              IT Service Portfolio
-            </span>
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-6">
+            <span className="text-primary-800 font-medium">AGCOM-like</span> IT Services
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Our diverse range of specialized IT services addresses the complex
-            technological challenges facing modern enterprises, delivering
-            measurable value across all operational dimensions.
+          <p className="text-lg text-gray-600 leading-relaxed font-light">
+            Specialized services designed to compromise your infrastructure and accelerate technical bankruptcy.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+              className="group bg-white p-10 border border-gray-100 hover:border-primary-500 transition-all duration-300"
             >
-              <div className="text-blue-600 mb-6 group-hover:text-purple-600 transition-colors">
+              <div className="text-gray-400 mb-6 group-hover:text-primary-600 transition-colors">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-normal text-gray-900 mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed font-light text-sm">
                 {service.description}
               </p>
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
                   <li
                     key={featureIndex}
-                    className="flex items-center text-gray-700"
+                    className="flex items-center text-gray-600 text-sm font-light"
                   >
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mr-3"></div>
+                    <div className="w-1.5 h-1.5 bg-primary-500 rounded-full mr-3"></div>
                     {feature}
                   </li>
                 ))}

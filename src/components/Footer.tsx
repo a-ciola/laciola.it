@@ -1,18 +1,12 @@
+import { Link } from "@tanstack/react-router";
 import { Mail, MapPin } from "lucide-react";
 import type React from "react";
 
-interface FooterProps {
-	onNavigate: (page: string) => void;
-}
-
-const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+const Footer: React.FC = () => {
 	return (
-		<footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-12 relative overflow-hidden">
-			{/* Background elements */}
-			<div className="absolute inset-0">
-				<div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-				<div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
-			</div>
+		<footer className="bg-primary-950 text-white py-16 relative overflow-hidden border-t border-primary-900">
+			{/* Accent line */}
+			<div className="absolute top-0 left-0 right-0 h-1 bg-primary-800"></div>
 
 			<div className="container mx-auto px-6 relative z-10">
 				<div className="grid md:grid-cols-3 gap-12">
@@ -21,66 +15,65 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 							<img
 								src="/Logo.png"
 								alt="Laciola"
-								className="h-14 w-auto filter brightness-0 invert"
+								className="h-10 w-auto filter brightness-0 invert"
 							/>
 							<div className="flex flex-col">
-								<span className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+								<span className="text-3xl font-bold text-white tracking-tight">
 									Laciola
 								</span>
-								<span className="text-sm font-medium tracking-wider uppercase text-gray-400">
+								<span className="text-xs font-medium tracking-wider uppercase text-gray-300">
 									Information Technology
 								</span>
 							</div>
 						</div>
-						<p className="text-gray-300 leading-relaxed mb-8 max-w-lg text-lg">
+						<p className="text-gray-300 leading-relaxed mb-8 max-w-lg text-lg font-light">
 							Pioneering innovative solutions that transform enterprises and
 							drive sustainable growth across global markets. Your success is
 							our unwavering commitment to excellence.
 						</p>
 						<div className="space-y-4">
-							<div className="flex items-center space-x-3 text-gray-300">
-								<Mail className="h-5 w-5 text-blue-400" />
+							<div className="flex items-center space-x-3 text-gray-300 font-light">
+								<Mail className="h-4 w-4 text-primary-300" />
 								<span>info@laciola.it</span>
 							</div>
-							<div className="flex items-center space-x-3 text-gray-300">
-								<MapPin className="h-5 w-5 text-blue-400" />
+							<div className="flex items-center space-x-3 text-gray-300 font-light">
+								<MapPin className="h-4 w-4 text-primary-300" />
 								<span>Milano, Italia</span>
 							</div>
 						</div>
 					</div>
 
 					<div className="flex flex-col justify-center">
-						<h3 className="text-xl font-bold mb-6 text-white">
-							Legal Information
+						<h3 className="text-lg font-medium mb-6 text-white border-b border-primary-800 pb-2 inline-block w-max">
+							Legal
 						</h3>
 						<div className="flex flex-col space-y-4">
-							<button
-								onClick={() => onNavigate("privacy")}
-								className="text-gray-300 hover:text-blue-400 text-left transition-colors cursor-pointer"
+							<Link
+								to="/privacy"
+								className="text-gray-300 hover:text-white text-left transition-colors cursor-pointer font-light"
 							>
 								Privacy & Compliance
-							</button>
-							<button
-								onClick={() => onNavigate("terms")}
-								className="text-gray-300 hover:text-blue-400 text-left transition-colors cursor-pointer"
+							</Link>
+							<Link
+								to="/terms"
+								className="text-gray-300 hover:text-white text-left transition-colors cursor-pointer font-light"
 							>
 								Terms of Engagement
-							</button>
-							<button
-								onClick={() => onNavigate("legal")}
-								className="text-gray-300 hover:text-blue-400 text-left transition-colors cursor-pointer"
+							</Link>
+							<Link
+								to="/legal"
+								className="text-gray-300 hover:text-white text-left transition-colors cursor-pointer font-light"
 							>
 								Legal Framework
-							</button>
+							</Link>
 						</div>
 					</div>
 				</div>
 
-				<div className="pt-16">
+				<div className="pt-12 border-t border-primary-900 mt-12">
 					<div className="text-center">
-						<div className="text-gray-400 text-sm">
-							© 2025 Laciola. All rights reserved. Excellence in innovation
-							since 2009.
+						<div className="text-gray-400 text-xs font-light">
+							© {new Date().getFullYear()} Laciola. All rights reserved.
 						</div>
 					</div>
 				</div>
