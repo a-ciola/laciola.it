@@ -21,16 +21,40 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check for bun.lock*
+        id: bun-check
+        run: |
+          if [ -f bun.lock ] || [ -f bun.lockb ]; then
+            echo "has_bun_lock=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_bun_lock=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
+        if: ${{ steps.bun-check.outputs.has_bun_lock == 'true' }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
+        if: ${{ steps.bun-check.outputs.has_bun_lock == 'false' }}
         with:
           node-version: '18'
-          cache: 'npm'
+          cache: 'npm' 
 
-      - name: Install dependencies
+      - name: Install dependencies (bun)
+        if: ${{ steps.bun-check.outputs.has_bun_lock == 'true' }}
+        run: bun install
+
+      - name: Install dependencies (npm)
+        if: ${{ steps.bun-check.outputs.has_bun_lock == 'false' }}
         run: npm ci
 
-      - name: Build
+      - name: Build (bun)
+        if: ${{ steps.bun-check.outputs.has_bun_lock == 'true' }}
+        run: bun run build
+
+      - name: Build (npm)
+        if: ${{ steps.bun-check.outputs.has_bun_lock == 'false' }}
         run: npm run build
 
       - name: Upload artifact
