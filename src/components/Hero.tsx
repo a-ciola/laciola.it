@@ -9,6 +9,15 @@ const Hero: React.FC = () => {
 			{/* Minimal accent line */}
 			<div className="absolute top-0 left-0 right-0 h-1 bg-primary-800"></div>
 
+			{/* Faded Background Logo */}
+			<div className="hidden lg:block absolute -right-20 md:-right-10 top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none z-0">
+				<img
+					src="/Logo.png"
+					alt=""
+					className="h-[50vh] md:h-[85vh] w-auto max-w-none grayscale"
+				/>
+			</div>
+
 			<div className="container mx-auto px-6 relative z-10">
 				<div className="max-w-5xl mx-auto text-center">
 					<h1 className="text-6xl md:text-8xl font-light text-gray-900 mb-8 leading-tight tracking-tight">

@@ -47,7 +47,7 @@ const Services: React.FC = () => {
       icon: <Unlock className="h-10 w-10" />,
       title: "Data Breach as a Service",
       description:
-        "We expose your sensitive data to the highest bidder faster than you can say 'GDPR'. Transparency is our passion.",
+        "Think of it as a public, unscheduled backup. We democratize access to your private information for the benefit of all.",
       features: ["Public SQL Databases", "Leaked Credentials", "Zero-Encryption Standard"],
     },
     {
