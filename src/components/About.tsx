@@ -3,10 +3,10 @@ import type React from "react";
 
 const About: React.FC = () => {
 	const stats = [
-		{ number: "15+", label: "Years Excellence" },
-		{ number: "500+", label: "Global Clients" },
-		{ number: "50+", label: "Countries Served" },
-		{ number: "99.9%", label: "Success Rate" },
+		{ number: "2+", label: "Years Excellence" },
+		{ number: "2", label: "Clients" },
+		{ number: "1", label: "Countries Served" },
+		{ number: "6.9%", label: "Success Rate" },
 	];
 
 	const values = [
