@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 .env
 quotes_website/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
