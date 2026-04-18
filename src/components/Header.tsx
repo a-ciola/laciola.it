@@ -1,5 +1,5 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { ExternalLink, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
 
 const Header: React.FC = () => {
@@ -93,15 +93,12 @@ const Header: React.FC = () => {
             >
               Solutions
             </Link>
-            <a
-              href="https://quote.laciola.it"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary-600 transition-colors font-medium text-sm inline-flex items-center gap-1"
+            <Link
+              to="/quote"
+              className="hover:text-primary-600 transition-colors font-medium text-sm"
             >
               Quote
-              <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-            </a>
+            </Link>
           </nav>
 
           <button
@@ -151,16 +148,13 @@ const Header: React.FC = () => {
               >
                 Solutions
               </Link>
-              <a
-                href="https://quote.laciola.it"
-                target="_blank"
-                rel="noreferrer"
-                className="text-gray-700 hover:text-primary-600 transition-colors font-medium inline-flex items-center gap-1"
+              <Link
+                to="/quote"
+                className="text-gray-700 hover:text-primary-600 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Quote
-                <ExternalLink className="h-4 w-4" aria-hidden="true" />
-              </a>
+              </Link>
             </nav>
           </div>
         )}

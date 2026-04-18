@@ -3,6 +3,7 @@ import PrivacyCompliance from './components/PrivacyCompliance';
 import TermsOfEngagement from './components/TermsOfEngagement';
 import LegalFramework from './components/LegalFramework';
 import Home from './components/Home';
+import Quote from './components/Quote';
 import RootLayout from './components/RootLayout';
 
 export const rootRoute = createRootRoute({
@@ -34,11 +35,18 @@ const legalRoute = createRoute({
 	component: LegalFramework,
 });
 
+const quoteRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: '/quote',
+	component: Quote,
+});
+
 export const routeTree = rootRoute.addChildren([
 	indexRoute,
 	privacyRoute,
 	termsRoute,
 	legalRoute,
+	quoteRoute,
 ]);
 
 export const router = createRouter({ routeTree });
