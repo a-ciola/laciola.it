@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Linkedin } from "lucide-react";
 import type React from "react";
 
 const Footer: React.FC = () => {
@@ -40,6 +40,15 @@ const Footer: React.FC = () => {
 								<MapPin className="h-4 w-4 text-primary-300" />
 								<span>Milano, Italia</span>
 							</div>
+							<a
+								href="https://www.linkedin.com/company/laciola"
+								target="_blank"
+								rel="noreferrer"
+								className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors font-light"
+							>
+								<Linkedin className="h-4 w-4 text-primary-300" />
+								<span>LinkedIn</span>
+							</a>
 						</div>
 					</div>
 
