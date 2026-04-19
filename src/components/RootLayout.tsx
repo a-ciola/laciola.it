@@ -1,4 +1,4 @@
-import { useLocation, Outlet, ScrollRestoration } from '@tanstack/react-router';
+import { useLocation, Outlet } from '@tanstack/react-router';
 import { useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
@@ -15,7 +15,6 @@ const RootLayout: React.FC = () => {
 			<Header />
 			<Outlet />
 			<Footer />
-			<ScrollRestoration />
 		</>
 	);
 };
